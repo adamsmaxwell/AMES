@@ -1,9 +1,12 @@
-const express = require('express');
+import express from "express";
+
 const app = express();
+app.use(express.static('public'));
+
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello from Adams-Maxwell Enterprise System (AMES)!');
+   res.render('index.ejs');
 });
 
 app.get('/health', (req, res) => {
