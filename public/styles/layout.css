@@ -1,39 +1,70 @@
-:root {
+    :root {
       --primary-color: #A6E3E9;
       --secondary-color: #CBF1F5;
       --tertiary-color: #71C9CE;
       --quaternary-color: #E3FDFD;
 
       --header-footer-color: var(--tertiary-color);
-}
+      --menu-color: rgb(203, 203, 240);
+      --content-color: palegreen;
+    }
+      
+    html, body {
+        margin: 0;
+        height: 100%; /* Ensure html and body take full viewport height */
+        font-family: "Times New Roman", serif;
+    }
 
-* {
-    font-family: "Times New Roman", serif;
-}
+    .page-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        min-height: 100vh; /* Ensure wrapper takes at least full viewport height */
+    }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    main {
+        flex: 1; /* Allows main content to grow and push footer down */
+    }
 
-header {
-    background-color: var(--header-footer-color);
-    color: white;
-    text-align: center;
-    margin: 0px;
-}
+    header {
+        background-color: var(--header-footer-color);
+        color: white;
+        padding: 0px;
+        text-align: center;
+    }
+    
+    footer {
+        background-color: var(--header-footer-color);
+        color: white;
+        padding: 0px;
+        text-align: center;
+    }
 
-main {
-    flex: 1;
-    padding: 20px;
-    border: 1px black solid;
-}
+    .ames-home {
+            display:flex;
+            flex-direction: row;
+            gap: 5px;
+            border: 1px solid red;
+            height: 90vh;
+        }
 
-footer {
-    background-color: var(--header-footer-color);
-    color: white;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-}
+    .ames-menu {
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+        background-color: var(--menu-color);
+        text-align: left;
+        font-size: large;
+        padding: 15px;
+    }
+    
+    .ames-content {
+        background-color: var(--content-color);
+        text-align: center;
+        width:100%;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        height: 100%; 
+        border: 1px solid black;
+        font-size: 4rem;
+    }
